@@ -192,6 +192,15 @@ body, html {
     color: #FABA83;
 }
 
+.activity {
+    font-family: 'Montserrat', sans-serif;
+    color: #C1C699; /* Sage Green from your motif */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
 .divider {
     letter-spacing: 3px;
     color: rgba(255, 255, 255, 0.5);
@@ -587,4 +596,108 @@ body, html {
     .rsvp-section {
         padding: 40px 10px;
     }
+}
+
+/* Center the entire section */
+.gifts-section {
+    
+    width: 100%;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically if needed */
+    text-align: center;
+}
+
+.gifts-container {
+    width: 100%;
+    max-width: 500px; /* Limits width to keep text readable */
+    margin: 0 auto;
+}
+
+/* Tightening the QR Border Area */
+.qr-wrapper {
+    background: white;
+    padding: 15px; /* Reduced from 30px for a sleeker look */
+    border-radius: 12px;
+    display: inline-block;
+    border: 3px solid #C1C699; /* Sage Green motif */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    
+    /* Hardware acceleration for mobile */
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.qr-image {
+    width: 180px; /* Slightly smaller for better proportions */
+    height: 180px;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.bank-name, .account-details {
+    color: #3D4457; /* Dark text for contrast on white background */
+    margin: 8px 0;
+}
+
+
+.gifts-text {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    margin-bottom: 50px;
+}
+
+/* --- Creator Footer Styling --- */
+.creator-footer {
+    background-color: #121212; /* Slightly darker than main footer for depth */
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(193, 198, 153, 0.1); /* Subtle Sage Green line */
+}
+
+.made-with {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.creator-name {
+    font-family: 'Cinzel', serif;
+    color: #C1C699; /* Sage Green Branding */
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.creator-links {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 10px;
+}
+
+.creator-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    padding: 0 5px;
+}
+
+.creator-links a:hover {
+    color: #FABA83; /* Champagne Gold hover */
+}
+
+.service-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.55rem;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 4px;
+    margin-top: 10px;
 }
