@@ -703,3 +703,18 @@ body, html {
 }
 
 /*to commit the changes to github*/
+
+/* iPhone Responsiveness */
+
+@media screen and (max-width: 768px) {
+    /* Stacks the Wedding & Reception columns vertically */
+    .columns-wrapper, .maps-container, .split-section {
+        flex-direction: column !important;
+        align-items: center;
+    }
+    
+    .info-column, .location-box, .split-column {
+        width: 100% !important;
+        margin-bottom: 30px;
+    }
+}
