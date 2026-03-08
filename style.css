@@ -718,3 +718,19 @@ body, html {
         margin-bottom: 30px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .names-header, .hero, .main-container {
+        /* This is the most important fix for the "zoomed" look */
+        background-attachment: scroll !important; 
+        
+        /* Ensures the image fits the width of the phone */
+        background-size: cover !important; 
+        
+        /* Keeps the couple centered in the frame */
+        background-position: center center !important;
+        
+        /* Use dynamic height to fit mobile screens perfectly */
+        height: 60vh; 
+    }
+}
