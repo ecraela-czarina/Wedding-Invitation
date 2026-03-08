@@ -131,18 +131,27 @@ body, html {
 
 
 /* 1. Base Setup - FIXED TO ALLOW SCROLLING */
+/* 1. Base Setup - UPDATED FOR STABILITY */
+/* 1. The Fixed Background Layer */
+.fixed-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Use your exact image and gradient */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('banner_invitation.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1; /* Puts it behind everything */
+}
+
+/* 2. Reset the Invitation Body */
 .invitation-body {
     margin: 0;
     padding: 0;
-    min-height: 100vh; /* Changed from height to min-height */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('banner_invitation.jpg') no-repeat center center/cover fixed;
-    display: flex;
-    flex-direction: column; /* Stack sections vertically */
-    align-items: center;
+    background: transparent; /* Remove the background from here */
     color: white;
-    overflow-y: auto; /* Enable vertical scrolling */
-    overflow-x: hidden;
 }
 
 /* 2. Main Container - Adjusted for visibility */
@@ -706,31 +715,21 @@ body, html {
 
 /* iPhone Responsiveness */
 
+/* 3. The Updated Mobile Fix */
 @media screen and (max-width: 768px) {
-    /* Stacks the Wedding & Reception columns vertically */
+    .fixed-bg {
+        /* On mobile, we use a special height to prevent the white gap */
+        height: 100dvh; 
+    }
+
+    .main-container {
+        width: 100%;
+        background: transparent;
+    }
+
+    /* Keep your stacking logic for content */
     .columns-wrapper, .maps-container, .split-section {
         flex-direction: column !important;
         align-items: center;
-    }
-    
-    .info-column, .location-box, .split-column {
-        width: 100% !important;
-        margin-bottom: 30px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .names-header, .hero, .main-container {
-        /* This is the most important fix for the "zoomed" look */
-        background-attachment: scroll !important; 
-        
-        /* Ensures the image fits the width of the phone */
-        background-size: cover !important; 
-        
-        /* Keeps the couple centered in the frame */
-        background-position: center center !important;
-        
-        /* Use dynamic height to fit mobile screens perfectly */
-        height: 60vh; 
     }
 }
